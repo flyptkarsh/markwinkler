@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<%= render "/refinery/html_tag" %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <head>
+    <%= render "/refinery/head" %>
+    <%= favicon_link_tag 'mark.ico' %>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic|Muli:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <%= render "/refinery/javascripts" %>
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript">stLight.options({publisher: "9a63dbe0-9bb3-4520-8946-a5a2961b80c4", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+    </head>
+  <body id="<%= canonical_id @page %>">
+
+    <div class="container-fluid">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <%= image_tag("mark.png", width: "50%") %>
+          <h1>Mark Winkler</h1>
+          <h2>Life's Little Moments</h2>
+          <%= site_bar -%>
+          <div class="row">
+            <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+          </div>
+        </div>
+
+        <div class="col-sm-10"  id="page_container">
+          <section id="page">
+            <%= yield %>
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="container-fluid">
+      <%= render "/refinery/footer" -%>
+      <span class='st_sharethis_large' displayText='ShareThis'></span>
+      <span class='st_facebook_large' displayText='Facebook'></span>
+      <span class='st_twitter_large' displayText='Tweet'></span>
+      <span class='st_linkedin_large' displayText='LinkedIn'></span>
+      <span class='st_pinterest_large' displayText='Pinterest'></span>
+      <span class='st_email_large' displayText='Email'></span>
+    </footer>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -15,3 +15,53 @@
  *= require refinery/theme
  *= require_self
  */
+
+ h1, h2, h3, h4, h5, h6 {
+   font-family: 'Playfair Display', serif !important;
+ }
+ h1 {
+   font-weight: bolder !important;
+ }
+ body {
+   font-family: 'Muli', sans-serif;
+   background-color: #ffffff;
+   background-image: url("http://www.transparenttextures.com/patterns/large-leather.png");
+ }
+
+
+.row.content {height: 1500px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  color: white !important;
+  background-color: slategrey;
+  /*background-image: url("http://www.transparenttextures.com/patterns/tileable-wood-colored.png");*/
+  height: 100%;
+}
+
+#page {
+  padding-right: 20%;
+  padding-right: 30%;
+}
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height: auto;}
+}
+.nav>li>a {
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+}
+.nav>li>a:hover {
+  color: grey;
+}

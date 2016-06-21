@@ -62,3 +62,7 @@ gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 gem 'refinerycms-authentication-devise', '~> 1.0'
 
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
+
+group :production do
+  gem 'dragonfly-s3_data_store'
+end
