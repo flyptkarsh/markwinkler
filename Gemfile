@@ -3,10 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-# Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -18,6 +15,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem 'pg'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -66,5 +65,4 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 group :production do
   gem 'dragonfly-s3_data_store'
   gem 'rails_12factor'
-  gem 'sqlite3'
 end
