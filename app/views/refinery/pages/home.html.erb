@@ -1,12 +1,12 @@
 <br>
 
 <div id="homeContent" class="pull-right" >
-  <%= image_tag('home.jpg') %>
   <%=simple_format( @page.content_for(:body) )%>
 </div>
 
 <style>
   #page_container {
+    background-image: url( "<%= image_url('homecover.jpg') %>" ) !important;
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: fixed;
