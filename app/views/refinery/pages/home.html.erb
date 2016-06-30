@@ -1,0 +1,23 @@
+<br>
+
+<div id="homeContent" class="pull-right" >
+  <%=simple_format( @page.content_for(:body) )%>
+</div>
+
+<style>
+  #page_container {
+    background-image: url("<%= image_url("home.jpg") %>");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: fixed;
+    background-color: #2f363d;
+    height: 1500px;
+  }
+  h1, p {
+    color: whitesmoke !important;
+  }
+  #homeContent {
+    margin-top: 25em;
+  }
+
+</style>
