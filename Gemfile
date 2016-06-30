@@ -47,7 +47,7 @@ group :development do
 end
 
 
-gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
+gem 'refinerycms'
 
 gem 'quiet_assets', group: :development
 
