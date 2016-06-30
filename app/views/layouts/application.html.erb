@@ -21,7 +21,7 @@
           <h1>Life's Little Moments</h1>
           <h3>Mark Winkler</h3>
 
-          <%= site_bar -%>
+
           <div class="row">
             <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
           </div>
@@ -29,6 +29,7 @@
 
         <div class="col-sm-10"  id="page_container">
           <section id="page">
+            <%= site_bar -%>
             <%= yield %>
           </section>
         </div>
